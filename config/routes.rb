@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   # this is the controller/application_controller
-  root 'application#hello'
+  root 'application#goodbye'
 end
