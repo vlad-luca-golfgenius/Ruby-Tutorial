@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   # this is the controller/application_controller
-  root 'application#hello'
+  root 'users#index'
 end
