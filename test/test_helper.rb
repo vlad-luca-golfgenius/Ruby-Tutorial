@@ -18,4 +18,22 @@ class ActiveSupport::TestCase
     # access helpers in test
     !session[:user_id].nil?
   end
+
+  # Log in as a particular user.
+  def log_in_as(user)
+    session[:user_id] = user.id
+  end
+end
+
+class ActionDispatch::IntegrationTest
+  def log_in_as(user, password: 'password', remember_me: '1')
+    # we can not modify the session in the integration tests
+    post login_path, params: {
+      session: {
+        email: user.email,
+        password: password,
+        remember_me: remember_me
+      }
+    }
+  end
 end
