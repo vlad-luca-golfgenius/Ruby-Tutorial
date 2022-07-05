@@ -28,6 +28,7 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.7.3" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v6.1.4.6, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailbox (v6.1.4.6, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v6.1.4.6, RVM: ruby-2.7.3) [gem]" level="application" />
@@ -46,6 +47,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.7.2, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.4.1, RVM: ruby-2.7.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-will_paginate (v1.0.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.1.4, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v11.1.3, RVM: ruby-2.7.3) [gem]" level="application" />
@@ -56,6 +58,7 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, RVM: ruby-2.7.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faker (v2.11.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v1.1.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.0.0, RVM: ruby-2.7.3) [gem]" level="application" />
@@ -118,9 +121,9 @@
     <orderEntry type="library" scope="PROVIDED" name="webpacker (v5.4.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.5, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, RVM: ruby-2.7.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.3.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, RVM: ruby-2.7.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.0, RVM: ruby-2.7.3) [gem]" level="application" />
-    <orderEntry type="library" name="jquery" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
@@ -129,68 +132,24 @@
   <component name="RailsGeneratorsCache">
     <option name="generators">
       <list>
-        <option value="B" />
-        <option value="C" />
-        <option value="Default" />
-        <option value="FLEX_ERROR" />
-        <option value="G" />
-        <option value="J" />
-        <option value="M" />
-        <option value="O" />
-        <option value="P" />
-        <option value="S" />
-        <option value="T" />
-        <option value="The" />
         <option value="active_record:application_record" />
-        <option value="api" />
         <option value="application_record" />
         <option value="assets" />
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
-        <option value="d" />
-        <option value="dev" />
-        <option value="directory" />
-        <option value="edge" />
-        <option value="f" />
         <option value="generator" />
-        <option value="h" />
         <option value="helper" />
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
-        <option value="m" />
         <option value="mailbox" />
         <option value="mailer" />
-        <option value="master" />
         <option value="migration" />
-        <option value="minimal" />
         <option value="model" />
-        <option value="no-rc" />
-        <option value="p" />
-        <option value="q" />
-        <option value="r" />
-        <option value="rails" />
-        <option value="rc" />
         <option value="resource" />
-        <option value="s" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
-        <option value="skip-action-mailbox" />
-        <option value="skip-action-text" />
-        <option value="skip-active-job" />
-        <option value="skip-active-storage" />
-        <option value="skip-bootsnap" />
-        <option value="skip-collision-check" />
-        <option value="skip-gemfile" />
-        <option value="skip-jbuilder" />
-        <option value="skip-keeps" />
-        <option value="skip-listen" />
-        <option value="skip-namespace" />
-        <option value="skip-spring" />
-        <option value="skip-system-test" />
-        <option value="skip-turbolinks" />
-        <option value="skip-webpack-install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
@@ -198,74 +157,28 @@
         <option value="test_unit:install" />
         <option value="test_unit:mailbox" />
         <option value="test_unit:plugin" />
-        <option value="v" />
-        <option value="webpacker" />
       </list>
     </option>
     <option name="myGenerators">
       <list>
-        <option value="B" />
-        <option value="C" />
-        <option value="Default" />
-        <option value="FLEX_ERROR" />
-        <option value="G" />
-        <option value="J" />
-        <option value="M" />
-        <option value="O" />
-        <option value="P" />
-        <option value="S" />
-        <option value="T" />
-        <option value="The" />
         <option value="active_record:application_record" />
-        <option value="api" />
         <option value="application_record" />
         <option value="assets" />
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
-        <option value="d" />
-        <option value="dev" />
-        <option value="directory" />
-        <option value="edge" />
-        <option value="f" />
         <option value="generator" />
-        <option value="h" />
         <option value="helper" />
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
-        <option value="m" />
         <option value="mailbox" />
         <option value="mailer" />
-        <option value="master" />
         <option value="migration" />
-        <option value="minimal" />
         <option value="model" />
-        <option value="no-rc" />
-        <option value="p" />
-        <option value="q" />
-        <option value="r" />
-        <option value="rails" />
-        <option value="rc" />
         <option value="resource" />
-        <option value="s" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
-        <option value="skip-action-mailbox" />
-        <option value="skip-action-text" />
-        <option value="skip-active-job" />
-        <option value="skip-active-storage" />
-        <option value="skip-bootsnap" />
-        <option value="skip-collision-check" />
-        <option value="skip-gemfile" />
-        <option value="skip-jbuilder" />
-        <option value="skip-keeps" />
-        <option value="skip-listen" />
-        <option value="skip-namespace" />
-        <option value="skip-spring" />
-        <option value="skip-system-test" />
-        <option value="skip-turbolinks" />
-        <option value="skip-webpack-install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
@@ -273,8 +186,6 @@
         <option value="test_unit:install" />
         <option value="test_unit:mailbox" />
         <option value="test_unit:plugin" />
-        <option value="v" />
-        <option value="webpacker" />
       </list>
     </option>
   </component>
@@ -578,38 +489,6 @@
           <RakeTaskImpl description="" fullCommand="tmp/cache/assets" id="tmp/cache/assets" />
           <RakeTaskImpl description="" fullCommand="tmp/pids" id="tmp/pids" />
           <RakeTaskImpl description="" fullCommand="tmp/sockets" id="tmp/sockets" />
-          <RakeTaskImpl id="webdrivers">
-            <subtasks>
-              <RakeTaskImpl id="chromedriver">
-                <subtasks>
-                  <RakeTaskImpl description="" fullCommand="webdrivers:chromedriver:remove" id="remove" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:chromedriver:update" id="update" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:chromedriver:version" id="version" />
-                </subtasks>
-              </RakeTaskImpl>
-              <RakeTaskImpl id="edgedriver">
-                <subtasks>
-                  <RakeTaskImpl description="" fullCommand="webdrivers:edgedriver:remove" id="remove" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:edgedriver:update" id="update" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:edgedriver:version" id="version" />
-                </subtasks>
-              </RakeTaskImpl>
-              <RakeTaskImpl id="geckodriver">
-                <subtasks>
-                  <RakeTaskImpl description="" fullCommand="webdrivers:geckodriver:remove" id="remove" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:geckodriver:update" id="update" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:geckodriver:version" id="version" />
-                </subtasks>
-              </RakeTaskImpl>
-              <RakeTaskImpl id="iedriver">
-                <subtasks>
-                  <RakeTaskImpl description="" fullCommand="webdrivers:iedriver:remove" id="remove" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:iedriver:update" id="update" />
-                  <RakeTaskImpl description="" fullCommand="webdrivers:iedriver:version" id="version" />
-                </subtasks>
-              </RakeTaskImpl>
-            </subtasks>
-          </RakeTaskImpl>
         </subtasks>
       </RakeTaskImpl>
     </option>

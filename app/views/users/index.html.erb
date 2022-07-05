@@ -1,0 +1,12 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+<!--Ruby automatically iterates over the users if is of type list
+ even if the template is a single <li></li> element-->
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
