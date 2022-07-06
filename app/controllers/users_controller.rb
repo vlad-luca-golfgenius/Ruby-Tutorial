@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   def show
     # self.params (fancy method that can do a lot, not a simple dict)
     @user = User.find(params[:id])
-    flash[:warning] = "Sorry, the account you are looking for is not active!"
     redirect_to root_url unless @user.activated?
   end
 
