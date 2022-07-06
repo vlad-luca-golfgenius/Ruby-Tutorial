@@ -5,13 +5,15 @@ class UsersController < ApplicationController
 
   # /GET users/
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   # /GET user/<id>
   def show
     # self.params (fancy method that can do a lot, not a simple dict)
     @user = User.find(params[:id])
+    flash[:warning] = "Sorry, the account you are looking for is not active!"
+    redirect_to root_url unless @user.activated?
   end
 
   # /GET /signin
@@ -23,9 +25,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
