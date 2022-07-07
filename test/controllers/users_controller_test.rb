@@ -101,10 +101,21 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete user if logged in as admin" do
+    puts @admin_user
     log_in_as(@admin_user)
     assert_difference "User.count", -1 do
       delete user_path(@user)
     end
 
+  end
+
+  test "should redirect following when not logged in" do
+    get following_user_path(@user)
+    assert_redirected_to login_url
+  end
+
+  test "should redirect followers when not logged in" do
+    get followers_user_path(@user)
+    assert_redirected_to login_url
   end
 end
